@@ -1,13 +1,13 @@
 # GNU General Public License - Version 3.0
 
-CC      = g++
-CFLAGS  = --std=c++14 -pedantic -Wall -O2
-HEADERS = $(shell find -maxdepth 1 -type f -name "*.h")
-SOURCES = $(shell find -maxdepth 1 -type f -name "*.cpp")
-OBJECTS = $(patsubst %.cpp,%.o,$(SOURCES))
-DPFILES = $(patsubst %.cpp,%.d,$(SOURCES))
-PROJECT = txg
-DOXYGEN = doc/html/index.html
+CC      := g++
+CFLAGS  := --std=c++14 -pedantic -Wall -O2
+HEADERS := $(shell find -maxdepth 1 -type f -name "*.h")
+SOURCES := $(shell find -maxdepth 1 -type f -name "*.cpp")
+OBJECTS := $(patsubst %.cpp,%.o,$(SOURCES))
+DPFILES := $(patsubst %.cpp,%.d,$(SOURCES))
+PROJECT := txg
+DOXYGEN := doc/html/index.html
 
 # set default target
 .DEFAULT_GOAL = $(PROJECT)
